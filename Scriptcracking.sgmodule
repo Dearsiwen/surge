@@ -2,7 +2,6 @@
 #!desc=一些破解脚本，自测（搬运至其他大佬处）
 
 [URL Rewrite]
-# Remove ADs
 ^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ - reject
 
 [MITM]
