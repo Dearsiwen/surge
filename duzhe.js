@@ -5,7 +5,7 @@ QuantumultX :
 [rewrite_local]
 # Remove ADs
 ^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ url reject-200
-https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo) url script-response-body https://ooxx.be/js/duzhe.js
+https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo) url script-response-body https://raw.githubusercontent.com/Dearsiwen/surge/main/duzhe.js
 [mitm] 
 hostname= www.fengread.com
 
@@ -16,7 +16,7 @@ Surge 4.2.0+ :
 # Remove ADs
 ^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ - reject
 [Script]
-duzhe = type=http-response,pattern=https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo),script-path=https://ooxx.be/js/duzhe.js, requires-body=true, timeout=10
+duzhe = type=http-response,pattern=https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo),script-path=https://raw.githubusercontent.com/Dearsiwen/surge/main/duzhe.js, requires-body=true, timeout=10
 [mitm] 
 hostname= www.fengread.com
 
@@ -27,7 +27,7 @@ Loon 2.1.0+ :
 # Remove ADs
 ^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ - reject
 [Script]
-http-response https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo) script-path=https://ooxx.be/js/duzhe.js, requires-body=true, timeout=10, tag=duzhe
+http-response https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo) script-path=https://raw.githubusercontent.com/Dearsiwen/surge/main/duzhe.js, requires-body=true, timeout=10, tag=duzhe
 [mitm] 
 hostname= www.fengread.com
 
