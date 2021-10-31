@@ -2,14 +2,11 @@
 #!desc=一些破解脚本，自测（搬运至其他大佬处）
 
 [MITM]
-hostname = %APPEND% dayone.*
+hostname = %APPEND% dayone.*, www.fengread.com
+
+
 [Script]
 Dayone = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js,script-update-interval=0
 
-
-# Remove ADs
-^(http|https):\/\/[\w-]+\.fengread\.com\/tuwen\/appads\/ - reject
-[Script]
 duzhe = type=http-response,pattern=https?:\/\/www\.fengread\.com\/(tuwen\/apktw\/bookv5|ebookreader\/fyhuserv5\/userinfo),script-path=https://raw.githubusercontent.com/Dearsiwen/surge/main/duzhe.js, requires-body=true, timeout=10
-[mitm] 
-hostname= www.fengread.com
+
