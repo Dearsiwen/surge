@@ -1,5 +1,5 @@
-#!name= 信息面板
-#!desc=netfilx、youtube
+name= 信息面板
+desc=netfilx、youtube
 
 [Panel]
 #Surge Pro标题,可显示启动时间,点击刷新为重载配置
