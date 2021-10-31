@@ -6,14 +6,16 @@
 #Surge Pro标题,可显示启动时间,点击刷新为重载配置
 SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 
-nf_check = script-name=nf_check, title="Netflix 解锁检测", content="请刷新", update-interval=1
-
-youtube_premium_check = script-name=youtube_premium_check, title="YouTube Premium 解锁检测", update-interval=1
+NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update-interval=1
 
 #流量统计
 TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 
-NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update-interval=1
+#Netflix 解锁检测
+nf_check = script-name=nf_check, title="Netflix 解锁检测", content="请刷新", update-interval=1
+
+#YouTube Premium 解锁检测
+youtube_premium_check = script-name=youtube_premium_check, title="YouTube Premium 解锁检测", update-interval=1
 
 [Script]
 #附带重载配置,Surge Pro标题,可显示启动时间,点击刷新为重载配置
